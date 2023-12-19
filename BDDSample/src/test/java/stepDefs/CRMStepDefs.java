@@ -12,11 +12,19 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 
 public class CRMStepDefs {
-	@Before("@SmokeTest")
+	@Before(value= "@SmokeTest", order =1)
+	public void readSmokeTestProperty() {
+		System.out.println("Read from Smoke Test property...");
+	}
+	@Before( value ="@SmokeTest", order = 2)
 	public static void initChrome() {
 		System.out.println("Init Chrome.....");
 	}
-	@Before("@RegressionTest")
+	@Before(value= "@RegressionTest", order =1)
+	public void readRegTestProperty() {
+		System.out.println("Read from Reg Test property...");
+	}
+	@Before(value ="@RegressionTest", order = 2)
 	public static void initEdge() {
 		System.out.println("Init Edge.....");
 	}

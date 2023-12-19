@@ -13,13 +13,13 @@ import io.cucumber.testng.CucumberOptions;
 		//tags = "@RegressionTest"
 //		tags ="@SmokeTest or @RegressionTest"
 //		tags ="@SmokeTest and @RegressionTest"
-		tags ="@PhaseTwo"
+//		tags ="@PhaseTwo"
 //		tags = "@PhaseOne and @SmokeTest"
 //		tags = "@PhaseOne and not @SmokeTest"
 //		tags= "@PhaseOne and not (@SmokeTest or @RegressionTest)"
 //		tags = "@PhaseOne and @SmokeTest and @RegressionTest"
-		)
-
+		tags = "@Phase2 and @SmokeTest or @RegressionTest"
+)
 public class CRMRunner extends AbstractTestNGCucumberTests {
 
 }
